@@ -546,7 +546,7 @@ const dmTools: Array<ToolMapRecord> = [
   },
   {
     name: "Ruler",
-    icon: <Icon.Dice boxSize="20px" />,
+    icon: <Icon.Ruler boxSize="20px" />,
     tool: RulerMapTool,
     MenuComponent: null,
   },
@@ -571,6 +571,7 @@ const ActiveDmMapToolModel = io.union([
   io.literal(AreaSelectMapTool.id),
   io.literal(MarkAreaMapTool.id),
   io.literal(TokenMarkerMapTool.id),
+  io.literal(RulerMapTool.id),
 ]);
 
 const activeDmMapToolIdModel: PersistedStateModel<
